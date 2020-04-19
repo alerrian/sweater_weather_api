@@ -11,6 +11,6 @@ class ForecastSearch
     weather = Forecast.new
     weather = weather.by_location(location_data)
 
-    location_forecast = LocationForecast.new(@location, weather)
+    LocationForecast.new(@location, weather)
   end
 end
