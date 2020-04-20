@@ -9,7 +9,7 @@ RSpec.describe 'Background API', type: :request do
         :id=>nil,
         :type=>"background",
         :attributes=>{
-          :background_url=>"https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg"
+          :background_url=>"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg"
           }
         }
       }

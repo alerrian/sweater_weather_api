@@ -1,6 +1,6 @@
 class BackgroundSearch
   def initialize(location)
-    @location = location
+    @location = location.split(',').first
     @background = get_background
   end
 
