@@ -9,4 +9,3 @@ RSpec.describe 'Forecast API', type: :request do
     expect(response).to be_successful
   end
 end
-
