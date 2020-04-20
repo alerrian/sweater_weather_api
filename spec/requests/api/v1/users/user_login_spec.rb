@@ -27,6 +27,6 @@ RSpec.describe 'As a user' do
       }
     }
 
-    expect(response).to be_successful
+    expect(response).to_not be_successful
   end
 end
