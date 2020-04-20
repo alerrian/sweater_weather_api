@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render json: UsersSerializer.new(@user)
+      render json: { status: 201, body: UsersSerializer.new(@user) }
     else
       render status: 400
     end
