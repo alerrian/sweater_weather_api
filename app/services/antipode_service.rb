@@ -7,6 +7,8 @@ class AntipodeService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  private
+  
   def connection
     Faraday.new(url: 'http://amypode.herokuapp.com') do |faraday|
       faraday.headers['api_key'] = ENV['AMYPODE_KEY']
