@@ -9,8 +9,8 @@ class ForecastSearch
   def get_forecast
     location_data = Location.new(@location)
     weather = Forecast.new
-    weather = weather.by_location(location_data)
+    weather_data = weather.by_location(location_data)
 
-    LocationForecast.new(@location, weather)
+    LocationForecast.new(@location, weather_data)
   end
 end
