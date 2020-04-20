@@ -5,7 +5,7 @@ class Api::V1::UsersController < ApplicationController
     if @user.save
       render json: UsersSerializer.new(@user)
     else
-      render status: :bad_request
+      render status: 400
     end
   end
 
