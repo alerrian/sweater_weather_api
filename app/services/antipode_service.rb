@@ -1,13 +1,10 @@
 class AntipodeService
   def antipode_location(lat, long)
-    require 'pry'; binding.pry
     response = connection.get('/api/v1/antipodes') do |faraday|
       faraday.params['lat'] = lat
       faraday.params['long'] = long
     end
-
     JSON.parse(response.body, symbolize_names: true)
-
   end
 
   def connection
