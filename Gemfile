@@ -9,6 +9,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'fast_jsonapi'
 gem 'figaro'
 gem 'faraday'
+gem 'bcrypt'
+gem 'shoulda-matchers'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -17,7 +19,6 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov'
-  gem 'shoulda-matchers'
   gem 'vcr'
   gem 'webmock'
   gem 'faker'
