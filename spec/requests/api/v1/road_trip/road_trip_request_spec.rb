@@ -17,7 +17,7 @@ RSpec.describe 'Road Trip API' do
           "origin": 'Denver, CO',
           "destination": 'Pueblo, CO',
           "travel_time": '1 hour 48 mins',
-          "arrival_forecast": '65.34, Clear'
+          "arrival_forecast": '66.81, scattered clouds'
         }
       }
     }

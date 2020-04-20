@@ -17,6 +17,8 @@ class Trip
   private
 
   def get_forecast_data
-    "#{@weather_info.forecast.current_temp}, #{@weather_info.forecast.current_description}"
+    future_time = @travel_time.split.first.to_i + 3
+
+    "#{@weather_info.forecast.hourly_forecast.to_a[future_time].second[:temp]}, #{@weather_info.forecast.hourly_forecast.to_a[future_time].second[:weather].first[:description]}"
   end
 end
