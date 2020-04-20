@@ -18,4 +18,15 @@ RSpec.describe 'As a user' do
 
     expect(response).to be_successful
   end
+
+  it 'can login with proper credentials', :vcr do 
+    post "/api/v1/sessions", params: { 
+      users: { 
+        email: @user.email,
+        password: 'password1'
+      }
+    }
+
+    expect(response).to be_successful
+  end
 end
