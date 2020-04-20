@@ -5,6 +5,8 @@ class GoogleService
     end
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  private
   
   def connection
     Faraday.new(url: 'https://maps.googleapis.com') do |faraday|
