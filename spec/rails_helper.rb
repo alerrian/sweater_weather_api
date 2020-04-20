@@ -46,6 +46,9 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.default_cassette_options = { record: :new_episodes, erb: true }
   config.configure_rspec_metadata!
+  config.filter_sensitive_data('<GGEO_KEY>') { ENV['GGEO_KEY'] }
+  config.filter_sensitive_data('<OWM_KEY>') { ENV['OWM_KEY'] }
+  config.filter_sensitive_data('<PEXELS_KEY>') { ENV['PEXELS_KEY'] }
 end
 
 RSpec.configure do |config|
