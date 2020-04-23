@@ -4,8 +4,8 @@ class Location
 
   def initialize(location)
     @location = get_location(location)
-    @lat = @location[:location][:lat]
-    @long = @location[:location][:lng]
+    @lat = @location[:lat]
+    @long = @location[:lng]
   end
 
   private
@@ -14,6 +14,6 @@ class Location
     data = GoogleService.new
     location_data = data.location_data(location)
 
-    location_data[:results].first[:geometry]
+    location_data[:results].first[:geometry][:location]
   end
 end
