@@ -5,13 +5,13 @@ RSpec.describe 'Background API', type: :request do
     location = 'Denver, CO'
 
     expected = {
-      data: {
-        :id=>nil,
-        :type=>"background",
-        :attributes=>{
-          :background_url=>"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg"
-          }
-        }
+                data: {
+                  :id=>nil,
+                  :type=>"background",
+                  :attributes=>{
+                    :background_url=>"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg"
+                    }
+                  }
       }
 
     get "/api/v1/backgrounds?location=#{location}"
